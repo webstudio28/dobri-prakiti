@@ -1,0 +1,433 @@
+/* Custom Styles for Добри практики - Food Safety Consulting */
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+/* Typography */
+.font-display {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out;
+}
+
+/* Mobile Menu Styles */
+#mobile-menu.open {
+    transform: translateY(0) !important;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    @apply bg-gradient-to-r from-food-green-500 to-food-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105;
+}
+
+.btn-secondary {
+    @apply bg-white text-food-gray-700 px-6 py-3 rounded-xl font-semibold border-2 border-food-gray-200 hover:border-food-green-300 hover:text-food-green-600 transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.btn-outline {
+    @apply border-2 border-food-green-500 text-food-green-600 px-6 py-3 rounded-xl font-semibold hover:bg-food-green-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1;
+}
+
+/* Card Styles */
+.card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-food-gray-100;
+}
+
+.card-hover {
+    @apply hover:border-food-green-200;
+}
+
+/* Service Card Styles */
+.service-card {
+    @apply group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-food-gray-100;
+}
+
+.service-card:hover {
+    @apply border-food-green-200;
+}
+
+.service-icon {
+    @apply w-16 h-16 bg-gradient-to-br from-food-green-500 to-food-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300;
+}
+
+.service-icon.blue {
+    @apply from-food-blue-500 to-food-blue-600;
+}
+
+.service-icon.gradient {
+    @apply from-food-green-500 to-food-blue-600;
+}
+
+/* Process Step Styles */
+.process-step {
+    @apply text-center group;
+}
+
+.process-step-number {
+    @apply w-20 h-20 bg-gradient-to-br from-food-green-500 to-food-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300;
+}
+
+.process-step-number.blue {
+    @apply from-food-blue-500 to-food-blue-600;
+}
+
+.process-step-number.gradient {
+    @apply from-food-green-500 to-food-blue-600;
+}
+
+/* Industry Card Styles */
+.industry-card {
+    @apply group bg-food-gray-50 rounded-xl p-6 text-center hover:bg-food-green-50 transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.industry-card.blue:hover {
+    @apply hover:bg-food-blue-50;
+}
+
+.industry-icon {
+    @apply w-16 h-16 bg-food-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-food-green-200 transition-colors;
+}
+
+.industry-icon.blue {
+    @apply bg-food-blue-100 group-hover:bg-food-blue-200;
+}
+
+/* Project Card Styles */
+.project-card {
+    @apply group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden;
+}
+
+.project-image {
+    @apply h-48 bg-gradient-to-br from-food-green-100 to-food-blue-100 flex items-center justify-center;
+}
+
+.project-image.blue {
+    @apply from-food-blue-100 to-food-green-100;
+}
+
+/* Success Story Styles */
+.success-story {
+    @apply bg-white rounded-2xl p-8 shadow-lg;
+}
+
+.success-story-icon {
+    @apply w-16 h-16 bg-food-green-100 rounded-full flex items-center justify-center;
+}
+
+.success-story-icon.blue {
+    @apply bg-food-blue-100;
+}
+
+/* Form Styles */
+.form-input {
+    @apply w-full px-4 py-3 border border-food-gray-300 rounded-xl focus:ring-2 focus:ring-food-green-500 focus:border-transparent transition-all duration-300;
+}
+
+.form-select {
+    @apply w-full px-4 py-3 border border-food-gray-300 rounded-xl focus:ring-2 focus:ring-food-green-500 focus:border-transparent transition-all duration-300;
+}
+
+.form-textarea {
+    @apply w-full px-4 py-3 border border-food-gray-300 rounded-xl focus:ring-2 focus:ring-food-green-500 focus:border-transparent transition-all duration-300 resize-none;
+}
+
+/* Badge Styles */
+.badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+}
+
+.badge-success {
+    @apply bg-food-green-100 text-food-green-800;
+}
+
+.badge-info {
+    @apply bg-food-blue-100 text-food-blue-800;
+}
+
+.badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Tag Styles */
+.tag {
+    @apply px-3 py-1 rounded-full text-sm;
+}
+
+.tag-green {
+    @apply bg-food-green-100 text-food-green-800;
+}
+
+.tag-blue {
+    @apply bg-food-blue-100 text-food-blue-800;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-food {
+    @apply bg-gradient-to-br from-food-green-50 via-white to-food-blue-50;
+}
+
+.bg-gradient-primary {
+    @apply bg-gradient-to-r from-food-green-500 to-food-blue-600;
+}
+
+.bg-gradient-secondary {
+    @apply bg-gradient-to-r from-food-blue-500 to-food-green-600;
+}
+
+/* Hover Effects */
+.hover-lift {
+    @apply transition-all duration-300 transform hover:-translate-y-1 hover:scale-105;
+}
+
+.hover-scale {
+    @apply transition-transform duration-300 hover:scale-110;
+}
+
+.hover-rotate {
+    @apply transition-transform duration-300 hover:rotate-1;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Mobile Menu Styles - Removed conflicting rules */
+
+/* Hamburger Menu Animation */
+.hamburger-line {
+    @apply transition-all duration-500 ease-out;
+}
+
+.hamburger-line-1.open {
+    @apply rotate-45 translate-y-2;
+}
+
+.hamburger-line-2.open {
+    @apply opacity-0;
+}
+
+.hamburger-line-3.open {
+    @apply -rotate-45 -translate-y-2;
+}
+
+/* Counter Animation */
+.counter {
+    @apply transition-all duration-1000 ease-out;
+}
+
+/* Loading States */
+.loading {
+    @apply opacity-50 pointer-events-none;
+}
+
+.loading::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent animate-pulse;
+}
+
+/* Focus States */
+.focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-food-green-500 focus:ring-offset-2;
+}
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+    .container-custom {
+        @apply px-4;
+    }
+    
+    .text-responsive {
+        @apply text-lg;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container-custom {
+        @apply px-6;
+    }
+    
+    .text-responsive {
+        @apply text-xl;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container-custom {
+        @apply px-8;
+    }
+    
+    .text-responsive {
+        @apply text-2xl;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-break {
+        page-break-before: always;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .bg-food-gray-50 {
+        background-color: #f8fafc !important;
+    }
+    
+    .text-food-gray-600 {
+        color: #475569 !important;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .animate-fade-in-up,
+    .animate-slide-in-left,
+    .animate-slide-in-right,
+    .animate-scale-in {
+        animation: none !important;
+    }
+}
+
+/* Dark Mode Support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles can be added here */
+}
+
+/* Custom Focus Indicators for Accessibility */
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-outline:focus {
+    @apply outline-none ring-2 ring-food-green-500 ring-offset-2 ring-offset-white;
+}
+
+/* Custom Selection Colors */
+::selection {
+    @apply bg-food-green-200 text-food-gray-900;
+}
+
+::-moz-selection {
+    @apply bg-food-green-200 text-food-gray-900;
+}
+
+/* Smooth Transitions for All Interactive Elements */
+a, button, input, select, textarea {
+    @apply transition-all duration-200 ease-in-out;
+}
+
+/* Enhanced Hover States for Better UX */
+.card:hover,
+.service-card:hover,
+.project-card:hover {
+    @apply shadow-2xl;
+}
+
+/* Custom Border Radius for Modern Look */
+.rounded-modern {
+    @apply rounded-2xl;
+}
+
+.rounded-modern-sm {
+    @apply rounded-xl;
+}
+
+.rounded-modern-lg {
+    @apply rounded-3xl;
+}

@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Услуги
+permalink: uslugi.html
+---
+
+<!-- Hero Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-food-gray-900 mb-4">
+            Нашите услуги
+        </h1>
+        <p class="text-lg md:text-xl text-food-gray-600 max-w-3xl">
+            Пълноценни решения за безопасността на храните – ясни, практични и съобразени с вашия бизнес.
+        </p>
+    </div>
+</section>
+
+<!-- Services Index (simple, flat) -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for s in services %}
+            <article class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow">
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">{{ s.serviceTitle or s.service }}</h2>
+                <p class="text-gray-600 mb-4">{{ s.description }}</p>
+                {% if s.bulletPoints and s.bulletPoints.length %}
+                <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                    {% for b in s.bulletPoints | slice(0,4) %}
+                        <li>• {{ b }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <a href="{{ s.servicePageLink }}" class="inline-block text-blue-700 font-medium hover:underline">Виж повече</a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

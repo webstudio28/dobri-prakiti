@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "projectType": "Гимназия ТЕТ ЛЕНИН",
+    "location": "Пловдив",
+    "service": "Машинно полагане на замазка",
+    "description": "Проектът включва машинно полагане на замазка на втория етаж, като обектът с площ от 80 кв.м беше завършен за половин работен ден.",
+    "images": [
+      "/assets/images/projects/uchilishte/uchilishte1.jpg",
+      "/assets/images/projects/uchilishte/uchilishte2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "projectType": "Къща (подово)",
+    "location": "Пловдив",
+    "service": "Замазки за подово отопление",
+    "description": "Пластификатор, специално предназначен за подово отопление, осигурява равномерно разпределение на топлината. Площ: 90 кв.м. Изпълнение за 1 работен ден.",
+    "images": [
+      "/assets/images/projects/kushta-podovo/kushta-podovo1.jpg",
+      "/assets/images/projects/kushta-podovo/kushta-podovo2.jpg",
+      "/assets/images/projects/kushta-podovo/kushta-podovo3.jpg",
+      "/assets/images/projects/kushta-podovo/kushta-podovo4.jpg",
+      "/assets/images/projects/kushta-podovo/kushta-podovo5.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "projectType": "Къща",
+    "location": "Раковски",
+    "service": "Машинно полагане на замазка",
+    "description": "Проектът включва машинно полагане на замазка върху площ от 80 кв.м, изпълнено в рамките на един работен ден.",
+    "images": [
+      "/assets/images/projects/kushta-rakovski/kushta-rakovski1.jpg",
+      "/assets/images/projects/kushta-rakovski/kushta-rakovski2.jpg",
+      "/assets/images/projects/kushta-rakovski/kushta-rakovski3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "projectType": "Мазе",
+    "location": "Белащица",
+    "service": "Машинно полагане на замазка",
+    "description": "Проектът включва машинно полагане на замазка. Обектът с площ от 50 кв.м беше завършен само за няколко часа.",
+    "images": [
+      "/assets/images/projects/maze/maze1.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "projectType": "Покрив",
+    "location": "Браниполе",
+    "service": "Замазки за открити площи, покриви и тераси",
+    "description": "Проектът включва полагане на замазка върху покрив с площ от 120 кв.м, оформен с наклони, водещи към сифоните за ефективно оттичане на водата.",
+    "images": [
+      "/assets/images/projects/pokriv/pokriv2.jpg",
+      "/assets/images/projects/pokriv/pokriv1.jpg",
+      "/assets/images/projects/pokriv/pokriv3.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "projectType": "Стълбище - ресан бетон",
+    "location": "София",
+    "service": "Полагане на бетон",
+    "description": "Проектът включва полагане на бетон с изграждане на стълбище. Ресан бетон, осигуряващ здравина и устойчиво покритие.",
+    "images": [
+      "/assets/images/projects/stulbishte/stulbishte1.jpg",
+      "/assets/images/projects/stulbishte/stulbishte2.jpg",
+      "/assets/images/projects/stulbishte/stulbishte3.jpg",
+      "/assets/images/projects/stulbishte/stulbishte4.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "projectType": "Къща",
+    "location": "Пловдив",
+    "service": "Машинно полагане на замазка",
+    "description": "Машинно полагане на замазка в двуетажна къща. Изпълнение за 2 дни. Отлично покритие и нивелация.",
+    "images": [
+      "/assets/images/projects/kushta/kushta3.jpg",
+      "/assets/images/projects/kushta/kushta2.jpg",
+      "/assets/images/projects/kushta/kushta4.jpg",
+      "/assets/images/projects/kushta/kushta1.jpg"
+    ]
+  }
+]

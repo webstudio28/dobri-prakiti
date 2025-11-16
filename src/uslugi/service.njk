@@ -1,0 +1,13 @@
+---
+pagination:
+  data: services
+  size: 1
+  alias: service
+eleventyComputed:
+  title: "{{ service.pageTitle or service.serviceTitle or service.service }}"
+permalink: "{{ service.servicePageLink }}"
+layout: service.njk
+---
+
+
+{# The rest of the service page is handled by the layout, which uses the 'service' variable #} 

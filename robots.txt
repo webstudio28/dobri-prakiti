@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin
+Disallow: /_site
+Sitemap: https://www.globus89.com/sitemap.xml 

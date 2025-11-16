@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Добри практики - Консултации по безопасност на храните | {% if title %}{{ title }} {% endif %}
+        </title>
+
+        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+        <meta name="description" content="Добри практики - Консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/custom-styles.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <!-- Open Graph meta tags -->
+        <meta property="og:title" content="Добри практики - Консултации по безопасност на храните"/>
+        <meta property="og:description" content="Добри практики - Консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики."/>
+        <meta property="og:image" content="https://webstudio28.github.io/dobri-praktiki/assets/images/socials-image.jpg"/>
+        <meta property="og:url" content="https://example.com/your-page"/>
+        <meta property="og:type" content="website"/>
+
+        <script src="/assets/js/gsap.min.js"></script>
+        <script src="/assets/js/ScrollTrigger.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+   
+    <body class="text-food-gray-800 relative bg-white">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 z-0 opacity-5">
+            <div class="absolute inset-0 bg-gradient-to-br from-food-green-100 to-food-blue-100"></div>
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="relative z-10">
+            <header class="w-full bg-ultra-dark-blue-800 shadow-lg border-b border-ultra-dark-blue-800 sticky top-0 z-50">
+                <nav class="max-w-7xl mx-auto flex justify-between items-center px-4 h-20 lg:px-8">
+                    <a href="/" class="flex items-center gap-3 text-2xl font-bold text-white">
+                        <img src="/assets/images/logo.png" alt="Добри практики - Лого" class="w-40 h-12 object-contain">
+                    </a>
+                    
+                                         <!-- Desktop Menu -->
+                    <div class="hidden lg:flex lg:items-center space-x-8 text-white">
+                        <a href="/" class="hover:text-food-green-300 transition-colors font-medium text-white">Начало</a>
+                        <a href="/za-nas.html" class="hover:text-food-green-300 transition-colors font-medium text-white">За нас</a>
+                        <a href="/uslugi.html" class="hover:text-food-green-300 transition-colors font-medium text-white">Услуги</a>
+                        <a href="/kontakt.html" class="hover:text-food-green-300 transition-colors font-medium text-white">Контакти</a>
+                        <a href="viber://chat?number=+359886118738" class="ml-4 bg-white text-ultra-dark-blue-800 px-6 py-2.5 rounded-3xl font-medium hover:bg-gray-100 transition-all duration-300 border border-gray-200">
+                            Свържи се във Viber
+                        </a>
+                    </div>
+                    
+                    <!-- Hamburger Button -->
+                    <button id="menu-toggle" class="lg:hidden text-white rounded-lg p-2 border border-ultra-dark-blue-700 bg-ultra-dark-blue-800 shadow-sm relative overflow-hidden group">
+                        <div class="hamburger-icon w-6 h-6 relative">
+                            <!-- Top line -->
+                            <span class="absolute top-1 left-0 w-full h-0.5 bg-current transform transition-all duration-500 ease-out origin-center hamburger-line hamburger-line-1"></span>
+                            <!-- Middle line -->
+                            <span class="absolute top-1/2 left-0 w-full h-0.5 bg-current transform -translate-y-1/2 transition-all duration-500 ease-out origin-center hamburger-line hamburger-line-2"></span>
+                            <!-- Bottom line -->
+                            <span class="absolute bottom-1 left-0 w-full h-0.5 bg-current transform transition-all duration-500 ease-out origin-center hamburger-line hamburger-line-3"></span>
+                            <!-- Creative X overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 x-overlay">
+                                <div class="relative w-6 h-6">
+                                    <span class="absolute top-1/2 left-0 w-full h-0.5 bg-current transform -translate-y-1/2 rotate-45 scale-x-0 transition-transform duration-500 ease-out origin-center x-line x-line-1"></span>
+                                    <span class="absolute top-1/2 left-0 w-full h-0.5 bg-current transform -translate-y-1/2 -rotate-45 scale-x-0 transition-transform duration-500 ease-out origin-center x-line x-line-2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="lg:hidden bg-ultra-dark-blue-800 border-t border-ultra-dark-blue-800 fixed top-20 left-0 right-0 transform -translate-y-full transition-transform duration-300 ease-out z-40">
+                    <div class="px-4 py-6 space-y-4">
+                        <a href="/" class="block py-3 px-4 hover:bg-ultra-dark-blue-700 rounded-lg transition-colors font-medium text-white">Начало</a>
+                        <a href="/za-nas.html" class="block py-3 px-4 hover:bg-ultra-dark-blue-700 rounded-lg transition-colors font-medium text-white">За нас</a>
+                        <a href="/uslugi.html" class="block py-3 px-4 hover:bg-ultra-dark-blue-700 rounded-lg transition-colors font-medium text-white">Услуги</a>
+                        <a href="/kontakt.html" class="block py-3 px-4 hover:bg-ultra-dark-blue-700 rounded-lg transition-colors font-medium text-white">Контакти</a>
+                        <a href="viber://chat?number=+359886118738" class="block bg-white text-ultra-dark-blue-800 px-6 py-3 rounded-lg font-medium text-center hover:bg-gray-100 transition-all duration-300 border border-gray-200">
+                            Свържи се във Viber
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                {{ content | safe }}
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-food-gray-900 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Company Info -->
+                        <div class="lg:col-span-2">
+                            <div class="flex items-center gap-3 mb-6">
+                                <img src="/assets/images/logo.png" alt="Добри практики - Лого" class="w-12 h-12 object-contain">
+                                <span class="text-2xl font-bold font-['Montserrat']">Добри практики</span>
+                            </div>
+                            <p class="text-food-gray-300 mb-6 max-w-md">
+                                Специализирани консултации по безопасност на храните, HACCP системи и производствени практики за вашия бизнес.
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <a href="tel:+359886118738" class="text-food-green-400 hover:text-food-green-300 transition-colors">
+                                    <i class="fas fa-phone mr-2"></i>+359 886 118 738
+                                </a>
+                                <a href="mailto:dobripraktiki8@gmail.com" class="text-food-green-400 hover:text-food-green-300 transition-colors">
+                                    <i class="fas fa-envelope mr-2"></i>dobripraktiki8@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Services -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Услуги</h3>
+                            <ul class="space-y-2 text-food-gray-300">
+                                <li><a href="/uslugi.html" class="hover:text-food-green-400 transition-colors">HACCP системи</a></li>
+                                <li><a href="/uslugi.html" class="hover:text-food-green-400 transition-colors">Технологична документация</a></li>
+                                <li><a href="/uslugi.html" class="hover:text-food-green-400 transition-colors">Производствени практики</a></li>
+                                <li><a href="/uslugi.html" class="hover:text-food-green-400 transition-colors">Контрол на записи</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Бързи връзки</h3>
+                            <ul class="space-y-2 text-food-gray-300">
+                                <li><a href="/za-nas.html" class="hover:text-food-green-400 transition-colors">За нас</a></li>
+                                <li><a href="/proekti" class="hover:text-food-green-400 transition-colors">Проекти</a></li>
+                                <li><a href="/kontakt.html" class="hover:text-food-green-400 transition-colors">Контакти</a></li>
+                                <li><a href="/uslugi.html" class="hover:text-food-green-400 transition-colors">Услуги</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-food-gray-800 mt-12 pt-8 text-center text-food-gray-400">
+                        <p>&copy; 2024 Добри практики. Всички права запазени.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="/assets/js/home-animations.js"></script>
+        <script src="/assets/js/home-gallery.js"></script>
+    </body>
+</html>

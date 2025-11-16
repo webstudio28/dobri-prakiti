@@ -1,0 +1,70 @@
+---
+layout: base.njk
+---
+
+<!-- Hero Section -->
+<section class="relative w-full min-h-[70vh] flex items-start overflow-hidden py-10">
+  <!-- Fullscreen background image -->
+  <img src="{{ pathPrefix }}{{ service.image }}" alt="{{ service.title }}" class="absolute inset-0 w-full h-full object-cover z-0"/>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-globus-black/70 z-10"></div>
+  
+  <!-- Content -->
+  <div class="container-custom my-auto h-full w-full relative z-20 flex flex-col items-start justify-center md:items-start">
+    <!-- Breadcrumb -->
+    <nav class="text-white/80 mb-6">
+      <a href="/" class="hover:text-globus-red transition-colors">Начало</a>
+      <span class="mx-2">></span>
+      <a href="/uslugi.html" class="hover:text-globus-red transition-colors">Услуги</a>
+      <span class="mx-2">></span>
+      <span class="text-white">{{ service.title }}</span>
+    </nav>
+    
+    <h1 class="w-full md:w-[80%] md:min-w-[600px] text-3xl md:text-5xl font-bold text-white mb-4 relative">
+      {{ service.seoTitle }}
+      <span class="block w-full md:w-96 h-1 bg-globus-red rounded-full mt-2"></span>
+    </h1>
+    <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
+      {{ service.intro }}
+    </p>
+
+  </div)
+</section>
+
+
+<!-- Call to Action Section -->
+<section id="contact" class="container-custom px-2 pt-8 md:px-8 md:pt-32">
+  <div class="bg-globus-black text-white rounded-[24px] shadow-xl text-center py-16 px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Готови ли сте да започнем?</h2>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+      Доверете се на екипа на Глобус 89 за {{ service.title | lower }}. Гарантираме качество, професионализъм и коректност.
+    </p>
+    
+    
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="tel:+359893872181" class="btn-primary text-lg w-full sm:w-auto">
+        📞 Обадете ни се
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+// FAQ Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+  
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const icon = this.querySelector('i');
+      
+      // Toggle content
+      content.classList.toggle('hidden');
+      
+      // Rotate icon
+      icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  });
+});
+</script> 
