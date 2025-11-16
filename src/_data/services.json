@@ -4,7 +4,7 @@
     "pageTitle": "Разработване на системи за безопасност на храните",
     "seoTitle": "Разработване на HACCP и производствени практики",
     "metaDescription": "Пълно разработване на HACCP, GMP/GHP, инструкции, записи и документация за съответствие с изискванията.",
-    "serviceTitle": "Разработване на системи",
+    "serviceTitle": "Разработване на HACCP системи",
     "description": "Създаваме цялостни системи за безопасност на храните – от HACCP и GMP/GHP до оперативни записи и технологична документация.",
     "bulletPoints": [
       "HACCP система и план",
@@ -13,6 +13,7 @@
       "Технологична документация и рецептурници",
       "Документи за регистрация или актуализация пред БАБХ"
     ],
+    "image": "assets/images/services/razrabotvane.jpg",
     "servicePageLink": "/uslugi/razrabotvane-na-sistemi-za-bezopasnost-na-hranite.html"
   },
   {
@@ -27,6 +28,7 @@
       "Контрол на записи, хигиена и проследимост",
       "Подкрепа при проверки от БАБХ"
     ],
+    "image": "assets/images/services/poddrazhka.jpg",
     "servicePageLink": "/uslugi/poddrazhka-i-aktualizacia-na-sistemi.html"
   },
   {
@@ -43,6 +45,7 @@
       "Подготовка за проверки и одити",
       "Обучение на персонала"
     ],
+    "image": "assets/images/services/tehnolog.jpg",
     "servicePageLink": "/uslugi/abonavent-vanshen-tehnolog.html"
   },
   {
@@ -60,6 +63,7 @@
       "Вътрешни одити",
       "Обучение и подкрепа по време на сертификация"
     ],
+    "image": "assets/images/services/sertifikacia.jpg",
     "servicePageLink": "/uslugi/podgotovka-za-sertifikacia.html"
   },
   {
@@ -74,6 +78,7 @@
       "Подробни доклади",
       "Планове за коригиращи действия"
     ],
+    "image": "assets/images/services/oditi.jpg",
     "servicePageLink": "/uslugi/vatreshni-oditi.html"
   },
   {
@@ -89,6 +94,7 @@
       "Работа с документи",
       "Практически обучения"
     ],
+    "image": "assets/images/services/obuchenia.jpg",
     "servicePageLink": "/uslugi/obuchenia-i-konsultacii.html"
   },
   {
@@ -102,6 +108,7 @@
       "Оценка спрямо изискванията на стандартите",
       "Подробен доклад и план за действия"
     ],
+    "image": "assets/images/services/gap.jpg",
     "servicePageLink": "/uslugi/gap-analiz.html"
   },
   {
@@ -116,7 +123,7 @@
       "Включена в HACCP системата",
       "Съвместима с изискванията на БАБХ"
     ],
+    "image": "assets/images/services/politika.jpg",
     "servicePageLink": "/uslugi/politika-po-bezopasnost-na-hranite.html"
   }
 ]
-

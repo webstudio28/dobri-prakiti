@@ -26,10 +26,9 @@ Target file: `src/index.njk`
 Required section order:
 1) Hero
 2) Services (preview cards / links)
-3) Защо да изберете нашите услуги (moved here from services page)
 industries we work with 
-4) Testimonials
-5) Bottom CTA (allowed two-tone blue gradient)
+1) Testimonials
+2) Bottom CTA (allowed two-tone blue gradient)
 
 Details:
 - Left-align all section titles and help/intro texts (including the “Защо да изберете нашите услуги” block).

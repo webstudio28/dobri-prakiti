@@ -7,34 +7,244 @@ permalink: uslugi.html
 <!-- Hero Section -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-food-gray-900 mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Нашите услуги
         </h1>
-        <p class="text-lg md:text-xl text-food-gray-600 max-w-3xl">
+        <p class="text-lg md:text-xl text-gray-700 max-w-3xl">
             Пълноценни решения за безопасността на храните – ясни, практични и съобразени с вашия бизнес.
         </p>
     </div>
 </section>
 
-<!-- Services Index (simple, flat) -->
-<section class="py-16 bg-white">
+<style>
+.industries-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: auto;
+}
+.industries-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.services-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: auto;
+}
+.services-scroll::-webkit-scrollbar {
+    display: none;
+}
+</style>
+
+
+
+
+<!-- All Services Grid -->
+<section class="py-10 md:py-20 bg-stone-200">
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Mobile: Horizontal scroll -->
+        <div class="flex gap-6 overflow-x-auto services-scroll pb-4 md:hidden">
             {% for s in services %}
-            <article class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow">
-                <h2 class="text-xl font-semibold text-gray-900 mb-2">{{ s.serviceTitle or s.service }}</h2>
-                <p class="text-gray-600 mb-4">{{ s.description }}</p>
-                {% if s.bulletPoints and s.bulletPoints.length %}
-                <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                    {% for b in s.bulletPoints | slice(0,4) %}
-                        <li>• {{ b }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                <a href="{{ s.servicePageLink }}" class="inline-block text-blue-700 font-medium hover:underline">Виж повече</a>
-            </article>
+            <div class="group relative flex-shrink-0 p-2">
+                <div class="bg-white shadow-lg h-full p-4 rounded-3xl relative flex flex-col w-[260px]">
+                    <div class="relative overflow-hidden rounded-2xl bg-black/20">
+                        <div class="w-full pt-[100%] bg-gray-100"></div>
+                        <img src="{{ s.image | url }}" alt="{{ s.serviceTitle or s.service }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false">
+                    </div>
+                    
+                    <div class="pt-4 flex flex-col gap-4 flex-grow">
+                        <div class="flex flex-col gap-2 justify-between">
+                            <h3 class="text-lg font-bold text-gray-900">
+                                {{ s.serviceTitle or s.service }}
+                            </h3>
+                            <p class="text-sm text-gray-700">
+                                {{ s.description }}
+                            </p>
+                        </div>
+                        
+                        <div class="flex-1"></div>
+                        
+                        <div class="mt-2 flex">
+                            <a href="{{ s.servicePageLink | url }}" class="block text-center text-white font-semibold rounded-full py-2 px-4 hover:shadow-lg hover:-translate-y-0.5 transition-all w-full bg-[#015437] hover:bg-[#00402a]">
+                                Виж услугата
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Desktop: 4 columns grid -->
+        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for s in services %}
+            <div class="group relative">
+                <div class="bg-white shadow-lg h-full p-4 rounded-3xl relative flex flex-col">
+                    <div class="relative overflow-hidden rounded-2xl bg-black/20">
+                        <div class="w-full pt-[100%] bg-gray-100"></div>
+                        <img src="{{ s.image | url }}" alt="{{ s.serviceTitle or s.service }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false">
+                    </div>
+                    
+                    <div class="pt-4 flex flex-col gap-4 flex-grow">
+                        <div class="flex flex-col gap-2 justify-between">
+                            <h3 class="text-lg font-bold text-gray-900">
+                                {{ s.serviceTitle or s.service }}
+                            </h3>
+                            <p class="text-sm text-gray-700">
+                                {{ s.description }}
+                            </p>
+                        </div>
+                        
+                        <div class="flex-1"></div>
+                        
+                        <div class="mt-2 flex">
+                            <a href="{{ s.servicePageLink | url }}" class="block text-center text-white font-semibold rounded-full py-2 px-4 hover:shadow-lg hover:-translate-y-0.5 transition-all w-full bg-[#015437] hover:bg-[#00402a]">
+                                Виж услугата
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
 </section>
 
+<!-- Industries Section -->
+<section class="py-10 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-left">
+                За кои индустрии работим
+            </h2>
+            <p class="text-xl text-gray-700 text-left">
+                Всяко производство е различно. Ние разработваме документацията и процедурите така, че да работят във вашата реалност – не шаблонно, а ефективно и устойчиво.
+            </p>
+        </div>
+        
+        <!-- Industries Cards -->
+        <div class="relative">
+            <div class="flex flex-nowrap gap-4 md:gap-6 overflow-x-auto industries-scroll js-industries-marquee">
+                {% for industry in industries %}
+                <div class="flex justify-between rounded-2xl gap-4 p-4 items-center flex-shrink-0" data-industry-card="true" style="background-color: {{ industry.color }};">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center">
+                            <img src="{{ industry.industryIcon | url }}" alt="{{ industry.title }}" class="w-6 h-6 object-contain">
+                        </div>
+                    </div>
+                    <p class="text-sm font-semibold text-white leading-tight">
+                        {{ industry.title }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const scroller = document.querySelector('.js-industries-marquee');
+    if (!scroller) return;
+
+    const motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    if (motionQuery && motionQuery.matches) {
+        return;
+    }
+
+    const baseItems = Array.from(scroller.querySelectorAll('[data-industry-card="true"]'));
+    if (!baseItems.length) return;
+
+    const wrapper = scroller.parentElement;
+
+    const computeBaseWidth = () => {
+        const styles = window.getComputedStyle(scroller);
+        const gap = parseFloat(styles.columnGap || styles.gap || 0);
+        const itemsWidth = baseItems.reduce((total, item) => total + item.getBoundingClientRect().width, 0);
+        return itemsWidth + gap * Math.max(baseItems.length - 1, 0);
+    };
+
+    let baseWidth = computeBaseWidth();
+
+    const ensureFilled = () => {
+        let safeguards = 0;
+        while (scroller.scrollWidth < Math.max(wrapper.offsetWidth + baseWidth, baseWidth * 3) && safeguards < 12) {
+            baseItems.forEach((item) => {
+                const clone = item.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                scroller.appendChild(clone);
+            });
+            safeguards += 1;
+        }
+    };
+
+    ensureFilled();
+
+    const recomputeAfterLoad = () => {
+        baseWidth = computeBaseWidth();
+        ensureFilled();
+    };
+    if (document.readyState === 'complete') {
+        recomputeAfterLoad();
+    } else {
+        window.addEventListener('load', recomputeAfterLoad, { once: true });
+    }
+
+    let lastTimestamp = null;
+    const speed = 30; // pixels per second
+    let isPaused = false;
+
+    const normalizePosition = () => {
+        while (scroller.scrollLeft >= baseWidth) {
+            scroller.scrollLeft -= baseWidth;
+        }
+        while (scroller.scrollLeft < 0) {
+            scroller.scrollLeft += baseWidth;
+        }
+    };
+
+    const step = (timestamp) => {
+        if (motionQuery && motionQuery.matches) return;
+        if (!lastTimestamp) lastTimestamp = timestamp;
+        const delta = timestamp - lastTimestamp;
+        lastTimestamp = timestamp;
+        if (!isPaused) {
+            scroller.scrollLeft += (speed * delta) / 1000;
+            normalizePosition();
+        }
+        requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+
+    const handleResize = () => {
+        baseWidth = computeBaseWidth();
+    };
+    window.addEventListener('resize', handleResize);
+
+    if (motionQuery && typeof motionQuery.addEventListener === 'function') {
+        motionQuery.addEventListener('change', (event) => {
+            if (event.matches) {
+                isPaused = true;
+            } else {
+                isPaused = false;
+                lastTimestamp = null;
+                requestAnimationFrame(step);
+            }
+        });
+    }
+
+    const pauseMarquee = () => { isPaused = true; };
+    const resumeMarquee = () => { isPaused = false; };
+
+    wrapper.addEventListener('mouseenter', pauseMarquee);
+    wrapper.addEventListener('mouseleave', resumeMarquee);
+    scroller.addEventListener('pointerdown', pauseMarquee);
+    scroller.addEventListener('pointerup', resumeMarquee);
+    scroller.addEventListener('pointercancel', resumeMarquee);
+    scroller.addEventListener('touchstart', pauseMarquee, { passive: true });
+    scroller.addEventListener('touchend', resumeMarquee);
+    scroller.addEventListener('touchcancel', resumeMarquee);
+});
+</script>

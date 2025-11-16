@@ -4,34 +4,37 @@ title: Начало
 ---
 
  <!-- Hero Section -->
-<section class="relative flex items-center justify-center overflow-hidden bg-gray-50 min-h-[calc(100vh-5rem)] py-16 lg:py-20">
+<section class="relative flex items-center justify-center overflow-hidden min-h-[calc(100vh-5rem)] py-8 lg:py-20">
     <!-- Content Container -->
     <div class="relative z-20 w-full max-w-7xl mx-auto px-4 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <!-- Image - Top on mobile, right on desktop -->
             <div class="relative order-1 lg:order-2">
-                <img src="/assets/images/hero-img.jpg" alt="Добри практики - Консултации по безопасност на храните" class="w-full h-[30vh] lg:h-96 object-cover rounded-2xl shadow-xl"/>
+                <img src="{{ '/assets/images/hero-img.jpg' | url }}" alt="Добри практики - Консултации по безопасност на храните" class="w-full h-[30vh] lg:h-96 object-cover rounded-2xl shadow-xl"/>
                 <!-- Subtle overlay for better text readability if needed -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
             </div>
             
             <!-- Text Content - Bottom on mobile, left on desktop -->
-            <div class="space-y-8 order-2 lg:order-1">
+            <div class="space-y-4 md:space-y-8 order-2 lg:order-1 ">
                 <!-- Main Heading -->
-                <h1 class="text-2xl text-center  md:text-left  md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h1 class="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight text-center md:text-left">
                     Спестете време и средства с нашите
-                    <span class="text-food-green-600">добри практики</span>
+                    <span class="text-yellow-600 marck-script-regular font-bolder text-5xl md:text-6xl">добри практики</span>
                 </h1>
                 
                 <!-- Subtitle -->
-                <p class="text-sm text-center md:text-left md:text-xl text-gray-600 leading-relaxed">
-                    Освободете се от грижите за водене на записи и се фокусирайте върху своето производство – ние ще се погрижим за всичко свързано с документацията по безопасността на храните.
+                <p class="text-md md:text-lg text-gray-700 leading-relaxed text-center md:text-left mt-0 md:-mt-4">
+                    Оптимизираме HACCP и документацията според реалните ви операции.
                 </p>
                 
-                <!-- CTA Button -->
-                <div class="pt-4 text-center lg:text-left">
-                    <a href="viber://chat?number=+359886118738" class="inline-block bg-ultra-dark-blue-800 text-white px-8 py-4 rounded-3xl font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
-                        Свържи се във Viber
+                <!-- CTA Buttons -->
+                <div class="pt-2 md:pt-4 text-center md:text-left flex flex-col sm:flex-row gap-4">
+                    <a href="viber://chat?number=+359886118738" class="inline-block text-white px-8 py-4 rounded-3xl font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 bg-[#015437] hover:bg-[#00402a]">
+                        Безплатна консултация
+                    </a>
+                    <a href="{{ '/kontakt.html' | url }}" class="inline-block text-gray-900 px-8 py-4 rounded-3xl font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 bg-white border-2 border-gray-300 hover:border-gray-400">
+                        Контакти
                     </a>
                 </div>
             </div>
@@ -39,114 +42,101 @@ title: Начало
     </div>
 </section>
 
-<!-- Testimonials Section -->
+
+<section class="py-10 md:py-20 lg:-mt-16">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        
+        
+        <div class="grid gap-12 lg:grid-cols-2 items-center">
+
+            <div class="hidden md:block relative">
+                <div class="relative overflow-hidden rounded-3xl shadow-md bg-white/50">
+                    <img src="{{ '/assets/images/about.png' | url }}" alt="Нашият екип" class="object-cover w-full h-[384px]" />
+                    
+                </div>
+            </div>
+            <div class="space-y-8">
+
+                
+                <div>
+                    <h2 class="mb-6 text-2xl md:text-3xl font-bold text-gray-900">
+                        За нас
+                    </h2>
+                    <p class="mb-6 text-lg text-gray-700 leading-relaxed">
+                        Основани през 2020, ние сме в авангарда на трансформацията в безопасността на храните, помагайки на стотици бизнеси в България да постигнат целите си чрез иновативни решения за HACCP и документация.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Нашият екип от експерти работи неуморно, за да достави решения, които не само отговарят на днешните предизвикателства, но и предвиждат утрешните възможности.
+                    </p>
+                </div>
+                
+                
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
 
 
  <!-- Services Section -->
- <section class="py-20 bg-cover bg-center md:bg-right bg-fixed relative" style="background-image: url('/assets/images/home-uslugi.jpg');">
-     <!-- Background Overlay for Opacity -->
-     <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/70 to-transparent"></div>
+ <section class="relative py-10 md:py-20 bg-stone-200">
+<div class="hidden absolute inset-0"
+     style="background: linear-gradient(135deg,
+       rgba(240,240,240,0.85) 100%,
+       rgba(240,240,240,0.5) 35%,
+       rgba(255,255,255,0.0) 75%
+     );"></div>
+
+
      <!-- Content Container -->
      <div class="relative z-10">
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
                  <!-- Section Header -->
         <div class="mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" >
+            <h2 class="text-2xl md:text-3xl font-bold text-food-gray-900 mb-4" >
                 Нашите услуги
             </h2>
-            <p class="text-xl text-white/80 max-w-3xl" >
+            <p class="text-xl text-gray-700 max-w-3xl" >
                 Пълноценни решения за безопасността на храните, които ще ви дадат спокойствие и ще ви позволят да се фокусирате върху основния си бизнес.
             </p>
         </div>
         
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                         <!-- Service 1: Creation -->
-             <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-600">
-                 <div class="flex items-center gap-3 mb-4 ">
-                     <img src="/assets/images/create.png" alt="Create Icon" class="w-10 h-10 object-contain">
-                     <h3 class="text-2xl font-bold text-gray-900">Създаване</h3>
-                 </div>
-                 <p class="text-gray-600 mb-6 leading-relaxed">
-                     Създаване на добри производствени практики, технологична документация и HACCP система, която отговаря на всички изисквания.
-                 </p>
-                 <ul class="space-y-2 text-gray-600 mb-6">
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>HACCP системи</span>
-                     </li>
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Технологична документация</span>
-                     </li>
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Производствени практики</span>
-                     </li>
-                 </ul>
-                 <a href="/uslugi.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1">
-                     Научи повече
-                     <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                 </a>
+        <!-- Services Carousel -->
+        <div class="flex gap-6 overflow-x-auto services-scroll pb-4">
+            {% for service in services %}
+            <div class="group relative flex-shrink-0 p-2">
+                <div class="bg-white shadow-lg h-full p-4 rounded-3xl relative flex flex-col w-[260px] md:w-[300px]" >
+                    <div class="relative overflow-hidden rounded-2xl bg-black/20">
+                        <div class="w-full pt-[100%] bg-gray-100"></div>
+                        <img src="{{ service.image | url }}" alt="{{ service.serviceTitle }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false">
              </div>
             
-                         <!-- Service 2: Updates -->
-             <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-600">
-                 <div class="flex items-center gap-3 mb-4">
-                     <img src="/assets/images/update.png" alt="Update Icon" class="w-10 h-10 object-contain">
-                     <h3 class="text-2xl font-bold text-gray-900">Актуализиране</h3>
-                 </div>
-                 <p class="text-gray-600 mb-6 leading-relaxed">
-                     Актуализиране на вече съществуваща документация спрямо нововъведенията при промяна на технология или нормативни изисквания.
-                 </p>
-                 <ul class="space-y-2 text-gray-600 mb-6">
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Нормативни промени</span>
-                     </li>
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Технологични промени</span>
-                     </li>
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Съответствие с изискванията</span>
-                     </li>
-                 </ul>
-                 <a href="/uslugi.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1">
-                     Научи повече
-                     <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                 </a>
+                    <div class="pt-4 flex flex-col gap-4 flex-grow">
+                        <div class="flex flex-col gap-2 justify-between">
+                            <h3 class="text-lg font-bold text-gray-900">
+                                {{ service.serviceTitle }}
+                            </h3>
+                            <p class="text-sm text-gray-700">
+                                {{ service.description }}
+                            </p>
              </div>
             
-                         <!-- Service 3: Maintenance -->
-             <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-600">
-                 <div class="flex items-center gap-3 mb-4">
-                     <img src="/assets/images/maintain.png" alt="Maintain Icon" class="w-10 h-10 object-contain">
-                     <h3 class="text-2xl font-bold text-gray-900">Поддържане</h3>
-                 </div>
-                 <p class="text-gray-600 mb-6 leading-relaxed">
-                     Водене на записи свързани с входящ контрол на суровините и изходящ контрол на готовата продукция.
-                 </p>
-                 <ul class="space-y-2 text-gray-600 mb-6">
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Входящ контрол</span>
-                     </li>
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Изходящ контрол</span>
-                     </li>
-                     <li class="flex items-center gap-2">
-                         <i class="fas fa-check text-blue-600 text-sm"></i>
-                         <span>Водене на записи</span>
-                     </li>
-                 </ul>
-                 <a href="/uslugi.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1">
-                     Научи повече
-                     <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <div class="flex-1"></div>
+
+                        <div class="mt-2 flex">
+                            <a href="{{ service.servicePageLink | url }}" class="block text-center text-white font-semibold rounded-full py-2 px-4 hover:shadow-lg hover:-translate-y-0.5 transition-all w-full bg-[#015437] hover:bg-[#00402a]">
+                                Виж услугата
                  </a>
              </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
     </div>
@@ -154,251 +144,252 @@ title: Начало
 
 
 
-<!-- Industries Section -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        <!-- Section Header -->
-        <div class="max-w-3xl mb-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-food-gray-900 mb-4 text-left">
-                За кои индустрии работим
-            </h2>
-            <p class="text-xl text-food-gray-600 text-left">
-                Всяко производство е различно. Ние разработваме документацията и процедурите така, че да работят във вашата реалност – не шаблонно, а ефективно и устойчиво.
+<section id="works" class="relative py-10 sm:py-16 lg:py-24">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-4xl text-gray-900 font-extrabold mx-auto md:text-6xl lg:text-5xl">Как работим?</h2>
+            <p class="max-w-2xl mx-auto mt-4 text-base text-gray-700 leading-relaxed md:text-2xl">
+                От първия контакт до пълноценна система за безопасност на храните
             </p>
         </div>
-        
-        <!-- Industries Cards -->
-        <div class="relative">
-            <div class="flex flex-nowrap gap-4 md:gap-6 overflow-x-auto industries-scroll js-industries-marquee">
-                {% for industry in industries %}
-                <div class="flex justify-between rounded-2xl gap-4 p-4 items-center flex-shrink-0" data-industry-card="true" style="background-color: {{ industry.color }};">
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center">
-                            <img src="{{ industry.industryIcon | url }}" alt="{{ industry.title }}" class="w-6 h-6 object-contain">
-                        </div>
+        <div class="relative mt-12 lg:mt-20">
+            <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28"><img alt="" loading="lazy" width="1000" height="500" decoding="async" data-nimg="1" class="w-full" style="color:transparent" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg">
+            </div>
+            <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
+                <div>
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-[#015437] border-2 border-[#015437] rounded-full shadow">
+                        <span class="text-xl font-semibold text-white">1</span>
                     </div>
-                    <p class="text-sm font-semibold text-white leading-tight">
-                        {{ industry.title }}
+                    <h3 class="mt-6 text-xl text-gray-900 font-semibold leading-tight md:mt-10">Консултация и анализ</h3>
+                    <p class="mt-4 text-base text-gray-700 md:text-lg">
+                        Оценяваме вашите нужди и текущото състояние, за да създадем решение, съобразено с вашата реалност.
                     </p>
                 </div>
-                {% endfor %}
+                <div>
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-[#015437] border-2 border-[#015437] rounded-full shadow">
+                        <span class="text-xl font-semibold text-white">2</span>
+            </div>
+                    <h3 class="mt-6 text-xl text-gray-900 font-semibold leading-tight md:mt-10">Разработване и внедряване</h3>
+                    <p class="mt-4 text-base text-gray-700 md:text-lg">
+                        Изготвяме HACCP системи, документация и процедури, които работят във вашата среда.
+                    </p>
+                </div>
+                <div>
+                    <div
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-[#015437] border-2 border-[#015437] rounded-full shadow">
+                        <span class="text-xl font-semibold text-white">3</span>
+            </div>
+                    <h3 class="mt-6 text-xl text-gray-900 font-semibold leading-tight md:mt-10">Поддръжка и развитие</h3>
+                    <p class="mt-4 text-base text-gray-700 md:text-lg">
+                        Осигуряваме текуща поддръжка, актуализации и обучение, за да поддържате системата актуална.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    <div class="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
+        style="background:radial-gradient(1.89deg, rgba(1, 84, 55, 0.2) -1000%, rgba(0, 64, 42, 0.15) 1500.74%, rgba(1, 105, 68, 0.25) 56.49%, rgba(0, 46, 31, 0.08) 1150.91%)">
+    </div>
 </section>
 
 
-<section class="py-20 bg-white">
+
+
+
+<section class="hidden py-10 md:py-20">
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <!-- Section Header -->
-        <div class="text-center mb-16">
-                         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div class="mb-16 max-w-3xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-left">
                 Какво казват нашите клиенти
             </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p class="text-xl text-gray-700 text-left">
                 Доверието на нашите клиенти е най-важното за нас. Ето какво казват за нашите услуги.
             </p>
         </div>
         
         <!-- Testimonials Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Testimonial Card 1 -->
+            {% for t in testimonials %}
             <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div class="flex flex-col">
                     <!-- Company Logo and Name - top left -->
                     <div class="w-full px-6 pt-6 flex items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="/assets/images/ideal-product-logo.png" alt="Company Logo" class="w-8 h-8 object-contain">
+                            <img src="{{ t.logo | url }}" alt="{{ t.company }}" class="w-8 h-8 object-contain">
                         </div>
-                        <div class="text-sm font-semibold text-gray-700">Производствена компания</div>
+                        <div class="text-sm font-semibold text-gray-700">{{ t.company }}</div>
                     </div>
                     
                     <!-- Testimonial Content -->
                     <div class="w-full px-6 py-4 flex flex-col">
                         <p class="text-gray-700 mb-4 leading-relaxed text-sm">
-                            "Добри практики ни помогнаха да внедрим HACCP системата бързо и професионално. Сега сме спокойни за безопасността на нашите продукти."
+                            "{{ t.quote }}"
                         </p>
                         <!-- Name and title - right side -->
                         <div class="text-right">
-                            <div class="text-xs font-semibold text-gray-900">Иван Петров</div>
-                            <div class="text-xs text-gray-500">(Директор на производство)</div>
+                            <div class="text-xs font-semibold text-gray-900">{{ t.name }}</div>
+                            <div class="text-xs text-gray-500">({{ t.role }})</div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Testimonial Card 2 -->
-            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div class="flex flex-col">
-                    <!-- Company Logo and Name - top left -->
-                    <div class="w-full px-6 pt-6 flex items-center gap-3">
-                        <div class="flex-shrink-0">
-                            <img src="/assets/images/ideal-product-logo.png" alt="Company Logo" class="w-8 h-8 object-contain">
-                        </div>
-                        <div class="text-sm font-semibold text-gray-700">Ресторант "Вкусни ястия"</div>
-                    </div>
-                    
-                    <!-- Testimonial Content -->
-                    <div class="w-full px-6 py-4 flex flex-col">
-                        <p class="text-gray-700 mb-4 leading-relaxed text-sm">
-                            "Професионалният подход и вниманието към детайлите направиха процеса лесен за нас. Горещо препоръчваме!"
-                        </p>
-                        <!-- Name and title - right side -->
-                        <div class="text-right">
-                            <div class="text-xs font-semibold text-gray-900">Мария Георгиева</div>
-                            <div class="text-xs text-gray-500">(Собственик на ресторант)</div>
+            {% endfor %}
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial Card 3 -->
-            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div class="flex flex-col">
-                    <!-- Company Logo and Name - top left -->
-                    <div class="w-full px-6 pt-6 flex items-center gap-3">
-                        <div class="flex-shrink-0">
-                            <img src="/assets/images/ideal-product-logo.png" alt="Company Logo" class="w-8 h-8 object-contain">
-                        </div>
-                        <div class="text-sm font-semibold text-gray-700">Пекарна "Сладки хлябове"</div>
-                    </div>
-                    
-                    <!-- Testimonial Content -->
-                    <div class="w-full px-6 py-4 flex flex-col">
-                        <p class="text-gray-700 mb-4 leading-relaxed text-sm">
-                            "Благодарение на тяхната експертиза, нашата пекарна вече отговаря на всички изисквания за безопасност на храните."
-                        </p>
-                        <!-- Name and title - right side -->
-                        <div class="text-right">
-                            <div class="text-xs font-semibold text-gray-900">Стоян Димитров</div>
-                            <div class="text-xs text-gray-500">(Управител на пекарна)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 
+
+
 <!-- CTA Section -->
-<section class="py-20 bg-gradient-to-r from-food-green-600 to-food-blue-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 text-center">
-                 <h2 class="text-4л md:text-5xl font-bold mb-6">
-            Готови сте да започнете?
-        </h2>
-        <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Свържете се с нас за безплатна консултация и ще ви помогнем да създадете безопасна и съответстваща на изискванията среда за вашия бизнес.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/kontakt.html" class="bg-white text-food-gray-900 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
-                <i class="fas fa-calendar-check mr-2"></i>Безплатна консултация
-            </a>
-            <a href="tel:+359886118738" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-food-gray-900 transition-all duration-300 transform hover:-translate-y-1">
-                <i class="fas fa-phone mr-2"></i>Обади ни се
-            </a>
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="relative h-[420px] md:h-[360px] w-full flex flex-col md:flex-row justify-evenly items-center gap-10 md:gap-12 p-8 overflow-hidden rounded-3xl">
+
+            <!-- Background Image + Overlay -->
+            <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                <img src="{{ '/assets/images/cta2.jpg' | url }}" alt="CTA Background" class="w-full h-full object-cover -z-10">
+                <div class="absolute inset-0 bg-black/70"></div>
+            </div>
+            
+            <!-- Left Side Text -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center items-start text-left space-y-3 relative z-10">
+                <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
+                    Готови сте да започнете?
+                </h2>
+                <p class="text-white/90 text-sm md:text-base max-w-md">
+                    Свържете се с нас за безплатна консултация и заедно ще изградим работеща система за безопасност на храните, съобразена с вашето производство.
+                </p>
+                    </div>
+                    
+            <!-- Right Side Buttons -->
+            <div class="w-full md:w-1/2 relative z-10">
+                <div class="p-6 md:p-8 bg-white/50 backdrop-blur-md rounded-3xl flex flex-col gap-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="viber://chat?number=+359886118738" class="w-full inline-flex items-center justify-center gap-2 rounded-3xl px-6 py-3 text-sm md:text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 bg-[#016944] hover:bg-[#015437] text-white">
+                            <i class="fas fa-calendar-check"></i>
+                            Безплатна консултация
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
 <style>
-.industries-scroll {
+.industries-scroll,
+.services-scroll {
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-behavior: auto;
 }
-.industries-scroll::-webkit-scrollbar {
+.industries-scroll::-webkit-scrollbar,
+.services-scroll::-webkit-scrollbar {
     display: none;
+}
+
+@media (min-width: 768px) {
+    /* Show scrollbar for services carousel on desktop/tablet */
+    .services-scroll {
+        scrollbar-width: thin;            /* Firefox */
+        -ms-overflow-style: auto;         /* IE/Edge legacy */
+        cursor: grab;
+        user-select: none;                /* prevent text/image selection while dragging */
+        scrollbar-color: rgba(31,41,55,0.6) transparent; /* Firefox colors */
+    }
+    .services-scroll::-webkit-scrollbar {
+        display: block;                   /* Re-enable in WebKit */
+        height: 12px;
+    }
+    .services-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, rgba(31,41,55,0.7), rgba(31,41,55,0.4));
+        border-radius: 9999px;
+        border: 3px solid transparent;    /* creates some spacing effect */
+        background-clip: padding-box;
+    }
+    .services-scroll::-webkit-scrollbar-track {
+        background: rgba(15, 34, 58, 0.08);
+        border-radius: 9999px;
+    }
+    .services-scroll:hover::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, rgba(31,41,55,0.9), rgba(31,41,55,0.6));
+    }
+    .services-scroll.dragging {
+        cursor: grabbing;
+    }
+    .services-scroll::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
+
+/* Extra: prevent image dragging in WebKit */
+.services-scroll img {
+    -webkit-user-drag: none;
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const scroller = document.querySelector('.js-industries-marquee');
-    if (!scroller) return;
+    /* Desktop drag-to-scroll for Services carousel */
+    const servicesScroller = document.querySelector('.services-scroll');
+    const desktopMQ = window.matchMedia ? window.matchMedia('(min-width: 768px)') : null;
+    if (servicesScroller && desktopMQ && desktopMQ.matches) {
+        let dragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+        let activePointerId = null;
 
-    const motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-    if (motionQuery && motionQuery.matches) {
-        return;
-    }
+        const onPointerDown = (e) => {
+            if (e.button !== 0) return; // only left click
+            // Don't hijack clicks on links
+            if (e.target.closest('a')) return;
+            e.preventDefault(); // prevent image drag / text selection
+            dragging = true;
+            activePointerId = e.pointerId;
+            startX = e.clientX;
+            startScrollLeft = servicesScroller.scrollLeft;
+            servicesScroller.classList.add('dragging');
+            servicesScroller.setPointerCapture(e.pointerId);
+        };
 
-    const baseItems = Array.from(scroller.querySelectorAll('[data-industry-card="true"]'));
-    if (!baseItems.length) return;
+        const onPointerMove = (e) => {
+            if (!dragging || e.pointerId !== activePointerId) return;
+            e.preventDefault();
+            const deltaX = e.clientX - startX;
+            servicesScroller.scrollLeft = startScrollLeft - deltaX;
+        };
 
-    const wrapper = scroller.parentElement;
+        const endDrag = (e) => {
+            if (e.pointerId !== activePointerId) return;
+            dragging = false;
+            activePointerId = null;
+            servicesScroller.classList.remove('dragging');
+            try { servicesScroller.releasePointerCapture(e.pointerId); } catch (_) {}
+        };
 
-    const computeBaseWidth = () => {
-        const styles = window.getComputedStyle(scroller);
-        const gap = parseFloat(styles.columnGap || styles.gap || 0);
-        const itemsWidth = baseItems.reduce((total, item) => total + item.getBoundingClientRect().width, 0);
-        return itemsWidth + gap * Math.max(baseItems.length - 1, 0);
-    };
-
-    const ensureFilled = () => {
-        let safeguards = 0;
-        while (scroller.scrollWidth < wrapper.offsetWidth * 2 && safeguards < 8) {
-            baseItems.forEach((item) => {
-                const clone = item.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                scroller.appendChild(clone);
-            });
-            safeguards += 1;
-        }
-    };
-
-    ensureFilled();
-
-    let baseWidth = computeBaseWidth();
-    let lastTimestamp = null;
-    const speed = 30; // pixels per second
-    let isPaused = false;
-
-    const normalizePosition = () => {
-        if (scroller.scrollLeft >= baseWidth) {
-            scroller.scrollLeft -= baseWidth;
-        }
-    };
-
-    const step = (timestamp) => {
-        if (motionQuery && motionQuery.matches) return;
-        if (!lastTimestamp) lastTimestamp = timestamp;
-        const delta = timestamp - lastTimestamp;
-        lastTimestamp = timestamp;
-        if (!isPaused) {
-            scroller.scrollLeft += (speed * delta) / 1000;
-            normalizePosition();
-        }
-        requestAnimationFrame(step);
-    };
-
-    requestAnimationFrame(step);
-
-    const handleResize = () => {
-        baseWidth = computeBaseWidth();
-    };
-    window.addEventListener('resize', handleResize);
-
-    if (motionQuery && typeof motionQuery.addEventListener === 'function') {
-        motionQuery.addEventListener('change', (event) => {
-            if (event.matches) {
-                isPaused = true;
-            } else {
-                isPaused = false;
-                lastTimestamp = null;
-                requestAnimationFrame(step);
-            }
+        servicesScroller.addEventListener('pointerdown', onPointerDown);
+        servicesScroller.addEventListener('pointermove', onPointerMove);
+        servicesScroller.addEventListener('pointerup', endDrag);
+        servicesScroller.addEventListener('pointercancel', endDrag);
+        servicesScroller.addEventListener('pointerleave', (e) => {
+            if (dragging) endDrag(e);
         });
+
+        if (typeof desktopMQ.addEventListener === 'function') {
+            desktopMQ.addEventListener('change', (ev) => {
+                if (!ev.matches && dragging) {
+                    dragging = false;
+                    activePointerId = null;
+                    servicesScroller.classList.remove('dragging');
+                }
+            });
+        }
     }
 
-    const pauseMarquee = () => { isPaused = true; };
-    const resumeMarquee = () => { isPaused = false; };
-
-    wrapper.addEventListener('mouseenter', pauseMarquee);
-    wrapper.addEventListener('mouseleave', resumeMarquee);
-    scroller.addEventListener('pointerdown', pauseMarquee);
-    scroller.addEventListener('pointerup', resumeMarquee);
-    scroller.addEventListener('pointercancel', resumeMarquee);
-    scroller.addEventListener('touchstart', pauseMarquee, { passive: true });
-    scroller.addEventListener('touchend', resumeMarquee);
-    scroller.addEventListener('touchcancel', resumeMarquee);
 });
 </script>
