@@ -4,12 +4,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            Добри практики - Консултации по безопасност на храните | {% if title %}{{ title }} {% endif %}
+            {% if title %}{{ title }} | {% endif %}Добри практики - HACCP системи
         </title>
 
         <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | url }}">
 
-        <meta name="description" content="Добри практики - Консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики.">
+        <meta name="description" content="{% if description %}{{ description }}{% else %}Специализирани консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики.{% endif %}">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://dobripraktiki.com{{ page.url }}">
+        
+        <!-- Open Graph meta tags -->
+        <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Добри практики - HACCP системи"/>
+        <meta property="og:description" content="{% if description %}{{ description }}{% else %}Специализирани консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики.{% endif %}"/>
+        <meta property="og:image" content="https://dobripraktiki.com/assets/images/socials.png"/>
+        <meta property="og:url" content="https://dobripraktiki.com{{ page.url }}"/>
+        <meta property="og:type" content="website"/>
+        
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{% if title %}{{ title }} | {% endif %}Добри практики - HACCP системи">
+        <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}Специализирани консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики.{% endif %}">
+        <meta name="twitter:image" content="https://dobripraktiki.com/assets/images/socials.png">
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,12 +39,37 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-        <!-- Open Graph meta tags -->
-        <meta property="og:title" content="Добри практики - Консултации по безопасност на храните"/>
-        <meta property="og:description" content="Добри практики - Консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики."/>
-        <meta property="og:image" content="https://webstudio28.github.io/dobri-praktiki/assets/images/socials-image.jpg"/>
-        <meta property="og:url" content="https://example.com/your-page"/>
-        <meta property="og:type" content="website"/>
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Добри практики",
+          "description": "Специализирани консултации по безопасност на храните в България. HACCP системи, технологична документация и производствени практики.",
+          "url": "https://dobripraktiki.com/",
+          "logo": "https://dobripraktiki.com/assets/images/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+359886118738",
+            "contactType": "customer service",
+            "availableLanguage": "Bulgarian"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BG",
+            "addressLocality": "България"
+          },
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61583697776250"
+          ],
+          "serviceArea": {
+            "@type": "Country",
+            "name": "България"
+          },
+          "areaServed": "България",
+          "knowsAbout": ["HACCP", "Безопасност на храните", "Производствени практики", "Технологична документация"]
+        }
+        </script>
 
         <script src="{{ '/assets/js/gsap.min.js' | url }}"></script>
         <script src="{{ '/assets/js/ScrollTrigger.min.js' | url }}"></script>
