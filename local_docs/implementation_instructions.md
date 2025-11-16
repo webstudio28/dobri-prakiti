@@ -27,6 +27,7 @@ Required section order:
 1) Hero
 2) Services (preview cards / links)
 3) Защо да изберете нашите услуги (moved here from services page)
+industries we work with 
 4) Testimonials
 5) Bottom CTA (allowed two-tone blue gradient)
 

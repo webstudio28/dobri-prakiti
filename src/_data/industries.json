@@ -1,0 +1,43 @@
+[
+    {
+      "title": "Хлебни и сладкарски изделия",
+      "industryIcon": "/assets/images/industry/bread.png",
+      "color": "#6F7B6E"
+    },
+    {
+      "title": "Плодове и зеленчуци",
+      "industryIcon": "/assets/images/industry/fruits.png",
+      "color": "#7C7A63"
+    },
+    {
+      "title": "Консервирани и готови храни",
+      "industryIcon": "/assets/images/industry/canned.png",
+      "color": "#8A7F6F"
+    },
+    {
+      "title": "Захарни изделия и десерти",
+      "industryIcon": "/assets/images/industry/sweets.png",
+      "color": "#6C625B"
+    },
+    {
+      "title": "Подправки и сухи смеси",
+      "industryIcon": "/assets/images/industry/spices.png",
+      "color": "#555C58"
+    },
+    {
+      "title": "Напитки",
+      "industryIcon": "/assets/images/industry/drinks.png",
+      "color": "#78877A"
+    },
+    {
+      "title": "Семена, ядки и масла",
+      "industryIcon": "/assets/images/industry/nuts.png",
+      "color": "#726F65"
+    },
+    {
+      "title": "Пакетиране и търговия с храни",
+      "industryIcon": "/assets/images/industry/packaging.png",
+      "color": "#5F6667"
+    }
+  ]
+  

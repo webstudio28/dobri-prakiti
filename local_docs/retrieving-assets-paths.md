@@ -1,0 +1,3 @@
+Eleventy auto-loads files in src/_data/ as global data by their file name (use camelCase like homepageServices, products, faq). services.js reads homepageServices.json, normalizes image paths, and exposes a computed services list.
+In JSON, use root-relative (/assets/...) or bare (assets/...) paths, or full https://.... The normalizer ensures a single leading / (leaves https as-is).
+In templates, always render asset paths with | url (e.g., {{ '/assets/... ' | url }} or {{ product.images[0] | url }}) so dev uses / and production gets the correct pathPrefix.
