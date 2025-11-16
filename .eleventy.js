@@ -10,10 +10,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   
-  // Add global data for environment variables
-  eleventyConfig.addGlobalData("env", {
-    EMAIL_API_KEY: process.env.EMAIL_API_KEY
-  });
+  // Expose env vars if needed in templates (keep debug optional)
+  if (process.env.MAIL_KEY) {
+    console.log("Loaded API key:", process.env.MAIL_KEY);
+  }
+  eleventyConfig.addGlobalData("mailKey", process.env.MAIL_KEY || "");
   
   // Add services as global data
   eleventyConfig.addGlobalData("footerServices", function() {

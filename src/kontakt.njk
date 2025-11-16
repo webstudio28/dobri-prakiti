@@ -24,7 +24,14 @@ permalink: kontakt.html
                     Изпратете ни съобщение
                 </h2>
                 
-                <form class="space-y-6">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6" id="contact-form">
+                    {% if mailKey %}
+                        <input type="hidden" name="access_key" value="{{ mailKey | escape }}">
+                    {% endif %}
+                    <input type="hidden" name="subject" value="Ново запитване от сайта">
+                    <input type="hidden" name="redirect" value="https://dobripraktiki.com/thanks.html">
+                    <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Име *</label>
@@ -55,6 +62,7 @@ permalink: kontakt.html
                     <button type="submit" class="w-full bg-[#015437] hover:bg-[#00402a] text-white py-4 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
                         Изпрати съобщение
                     </button>
+                    <p class="text-sm text-gray-600" id="contact-form-result"></p>
                 </form>
             </div>
             
