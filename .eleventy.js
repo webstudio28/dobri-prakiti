@@ -21,7 +21,7 @@ module.exports = function(eleventyConfig) {
   // Add services as global data
   eleventyConfig.addGlobalData("footerServices", function() {
     const services = require("./src/_data/services.json");
-    return services.slice(0, 4);
+    return services;
   });
   
   eleventyConfig.addFilter("date", (dateObj, format = "dd LLL yyyy") => {
