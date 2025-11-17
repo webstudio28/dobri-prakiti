@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
     return; // Not on homepage, exit
   }
 
+  // Simple check: if user scrolled, don't reset
+  let userScrolled = false;
+  window.addEventListener('scroll', () => { userScrolled = true; }, { once: true, passive: true });
+
   // Create timeline for hero animations
   const heroTimeline = gsap.timeline({ defaults: { ease: 'back.out(1.7)' } });
 
@@ -63,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
     heroTimeline.to(heroImage, { opacity: 1, scale: 1, duration: 1.2, ease: 'back.out(1.7)' }, 0.3);
   }
 
-  // Ensure page stays at top after animations complete
+  // Only reset scroll if user hasn't scrolled
   heroTimeline.call(function() {
-    window.scrollTo(0, 0);
-    // Prevent any layout shifts
-    document.body.style.overflow = 'auto';
+    if (!userScrolled) {
+      window.scrollTo(0, 0);
+    }
   });
 });
 
