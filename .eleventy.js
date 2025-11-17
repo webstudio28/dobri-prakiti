@@ -29,12 +29,25 @@ module.exports = function(eleventyConfig) {
   // Ensure proper MIME types for assets
   eleventyConfig.addWatchTarget("src/assets/");
   
-  // Determine pathPrefix: prefer explicit env; fallback to GH repo name if available
+  // Determine pathPrefix: 
+  // 1. Check explicit env variable (highest priority)
+  // 2. If CNAME file exists, use "/" for custom domain
+  // 3. Fallback to GH repo name if available
+  // 4. Default to "/"
+  const fs = require('fs');
+  const hasCNAME = fs.existsSync('./CNAME');
   const explicitPrefix = process.env.PATH_PREFIX || process.env.ELEVENTY_PATH_PREFIX;
-  const repoPrefix = process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}`
-    : "/";
-  const pathPrefix = explicitPrefix || repoPrefix || "/";
+  
+  let pathPrefix = "/";
+  if (explicitPrefix) {
+    pathPrefix = explicitPrefix;
+  } else if (hasCNAME) {
+    // Custom domain detected - use root path
+    pathPrefix = "/";
+  } else if (process.env.GITHUB_REPOSITORY) {
+    // GitHub Pages project site - use repo name
+    pathPrefix = `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`;
+  }
 
   return {
     pathPrefix,
