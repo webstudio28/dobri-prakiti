@@ -50,6 +50,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 
+        {% if page.url == "/" or page.url == "/index.html" %}
+        <!-- Preload hero image to improve LCP on the home page -->
+        <link rel="preload" as="image" href="{{ '/assets/images/hero-img.jpg' | url }}">
+        {% endif %}
+
         <!-- GSAP for animations -->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 
@@ -92,6 +97,20 @@
               font-weight: 400;
               font-style: normal;
             }
+
+            /* Background image only for >= md screens to avoid extra bytes on mobile */
+            .site-bg-image {
+              opacity: 0.5;
+            }
+
+            @media (min-width: 768px) {
+              .site-bg-image {
+                background-image: url('/assets/images/bg.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+              }
+            }
         </style>
 
     </head>
@@ -99,7 +118,7 @@
     <body class="text-food-gray-800 relative bg-white">
         <!-- Site-wide Background Image + Gradient Overlay -->
         <div class="fixed inset-0 z-0 pointer-events-none">
-            <div class="absolute inset-0" style="background-image: url('/assets/images/bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; opacity: 0.5;"></div>
+            <div class="absolute inset-0 site-bg-image"></div>
             <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(255,249,227,0.85) 0%, rgba(255,249,227,0.5) 35%, rgba(255,255,255,0.0) 75%);"></div>
         </div>
 
