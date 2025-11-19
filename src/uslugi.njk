@@ -50,7 +50,7 @@ permalink: uslugi.html
                 <div class="bg-white shadow-lg h-full p-4 rounded-3xl relative flex flex-col w-[260px]">
                     <div class="relative overflow-hidden rounded-2xl bg-black/20">
                         <div class="w-full pt-[100%] bg-gray-100"></div>
-                        <img src="{{ s.image | url }}" alt="{{ s.serviceTitle or s.service }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false">
+                        <img src="{{ s.image | url }}" alt="{{ s.serviceTitle or s.service }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" loading="lazy" decoding="async">
                     </div>
                     
                     <div class="pt-4 flex flex-col gap-4 flex-grow">
@@ -83,7 +83,7 @@ permalink: uslugi.html
                 <div class="bg-white shadow-lg h-full p-4 rounded-3xl relative flex flex-col">
                     <div class="relative overflow-hidden rounded-2xl bg-black/20">
                         <div class="w-full pt-[100%] bg-gray-100"></div>
-                        <img src="{{ s.image | url }}" alt="{{ s.serviceTitle or s.service }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false">
+                        <img src="{{ s.image | url }}" alt="{{ s.serviceTitle or s.service }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" loading="lazy" decoding="async">
                     </div>
                     
                     <div class="pt-4 flex flex-col gap-4 flex-grow">
@@ -131,7 +131,7 @@ permalink: uslugi.html
                 <div class="flex justify-between rounded-2xl gap-4 p-4 items-center flex-shrink-0" data-industry-card="true" style="background-color: {{ industry.color }};">
                     <div class="flex items-start">
                         <div class="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center">
-                            <img src="{{ industry.industryIcon | url }}" alt="{{ industry.title }}" class="w-6 h-6 object-contain">
+                            <img src="{{ industry.industryIcon | url }}" alt="{{ industry.title }}" class="w-6 h-6 object-contain" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <p class="text-sm font-semibold text-white leading-tight">

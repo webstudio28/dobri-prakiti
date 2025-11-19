@@ -11,7 +11,7 @@ description: "Специализирани консултации по безо�
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <!-- Image - Top on mobile, right on desktop -->
             <div class="relative order-1 lg:order-2 hero-image">
-                <img src="{{ '/assets/images/hero-img.jpg' | url }}" alt="Добри практики - Консултации по безопасност на храните" class="w-full h-[30vh] lg:h-96 object-cover rounded-2xl shadow-xl"/>
+                <img src="{{ '/assets/images/hero-img.jpg' | url }}" alt="Добри практики - Консултации по безопасност на храните" class="w-full h-[30vh] lg:h-96 object-cover rounded-2xl shadow-xl" fetchpriority="high" decoding="async"/>
                 <!-- Subtle overlay for better text readability if needed -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
             </div>
@@ -52,7 +52,7 @@ description: "Специализирани консултации по безо�
 
             <div class="hidden md:block relative">
                 <div class="relative overflow-hidden rounded-3xl shadow-md bg-white/50">
-                    <img src="{{ '/assets/images/about.png' | url }}" alt="Нашият екип" class="object-cover w-full h-[384px]" />
+                    <img src="{{ '/assets/images/about.png' | url }}" alt="Нашият екип" class="object-cover w-full h-[384px]" loading="lazy" decoding="async" />
                     
                 </div>
             </div>
@@ -114,7 +114,7 @@ description: "Специализирани консултации по безо�
                 <div class="bg-white shadow-lg h-full p-4 rounded-3xl relative flex flex-col w-[260px] md:w-[300px]" >
                     <div class="relative overflow-hidden rounded-2xl bg-black/20">
                         <div class="w-full pt-[100%] bg-gray-100"></div>
-                        <img src="{{ service.image | url }}" alt="{{ service.serviceTitle }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false">
+                        <img src="{{ service.image | url }}" alt="{{ service.serviceTitle }}" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" loading="lazy" decoding="async">
              </div>
             
                     <div class="pt-4 flex flex-col gap-4 flex-grow">
@@ -251,7 +251,7 @@ description: "Специализирани консултации по безо�
 
             <!-- Background Image + Overlay -->
             <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
-                <img src="{{ '/assets/images/cta2.jpg' | url }}" alt="CTA Background" class="w-full h-full object-cover -z-10">
+                <img src="{{ '/assets/images/cta2.jpg' | url }}" alt="CTA Background" class="w-full h-full object-cover -z-10" loading="lazy" decoding="async">
                 <div class="absolute inset-0 bg-black/70"></div>
             </div>
             
@@ -270,8 +270,13 @@ description: "Специализирани консултации по безо�
                 <div class="p-6 md:p-8 bg-white/50 backdrop-blur-md rounded-3xl flex flex-col gap-4">
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="viber://chat?number=+359886118738" class="w-full inline-flex items-center justify-center gap-2 rounded-3xl px-6 py-3 text-sm md:text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 bg-[#016944] hover:bg-[#015437] text-white">
-                            <i class="fas fa-calendar-check"></i>
-                            Безплатна консултация
+                            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/10 border border-white/30">
+                                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 17L4 13L5.4 11.6L8 14.2L18.6 3.60001L20 5.00001L8 17Z" fill="currentColor"/>
+                                    <path d="M19 21H5C4.44772 21 4 20.5523 4 20V10H6V19H18V10H20V20C20 20.5523 19.5523 21 19 21Z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                            <span>Безплатна консултация</span>
                         </a>
 
                     </div>
