@@ -10,12 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   
-  // Expose env vars if needed in templates (keep debug optional)
-  // Support both MAIL_KEY and EMAIL_API_KEY for compatibility
-  const mailKey = process.env.MAIL_KEY || process.env.EMAIL_API_KEY || "";
-  if (mailKey) {
-    console.log("Loaded API key:", mailKey);
-  }
+  // Hardcoded contact form API key
+  const mailKey = "156809e4-9ae1-441c-88d0-3d4bfa011b01";
   eleventyConfig.addGlobalData("mailKey", mailKey);
   
   // Add services as global data
